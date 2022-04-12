@@ -9,6 +9,7 @@ def get_random_word():
 
 def get_valid_input(valid_words):
     in_word = input('Enter guess: ')
+    # return in_word.lower()
     if in_word.lower() in valid_words:
         return in_word.lower()
     else:

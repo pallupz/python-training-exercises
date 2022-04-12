@@ -5,8 +5,11 @@ from colorama import init, Back
 from utils import get_random_word, get_valid_input
 import copy
 
+
+print('\n\n************* WELCOME TO WORDLE *************')
+
 init(autoreset=True)
-word = 'hello' #get_random_word()
+word = get_random_word()
 
 with open('A10_wordle/valid-wordle-words.txt', 'r') as f:
     valid_words = f.read().splitlines()
@@ -32,13 +35,14 @@ while len(guesses) < attempts:
             # print(word_map_copy)
             for pos in word_map_copy.get(char):
                 if pos == idx:
-                    printls.append(Back.GREEN + ' ' + char + ' ')
+                    printls.append(Back.GREEN + ' ' + char.upper() + ' ')
                     word_map_copy[char].remove(pos) # due to example: tubas tasty
                     break    
             else:
-                printls.append(Back.YELLOW + ' ' + char + ' ')
+                word_map_copy[char].remove(pos) # due to example: hello hooly
+                printls.append(Back.YELLOW + ' ' + char.upper() + ' ')
         else:
-            printls.append(Back.WHITE + ' ' + char + ' ')
+            printls.append(Back.WHITE + ' ' + char.upper() + ' ')
     
     guesses.append(printls)
     for guess in guesses:
