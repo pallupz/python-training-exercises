@@ -7,7 +7,7 @@ from utils import get_random_word, get_valid_input
 init(autoreset=True)
 word = get_random_word()
 
-with open('A11_wordle/valid-wordle-words.txt', 'r') as f:
+with open('A10_wordle/valid-wordle-words.txt', 'r') as f:
     valid_words = f.read().splitlines()
 
 word_map = {}
