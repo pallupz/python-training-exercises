@@ -7,8 +7,8 @@ def get_random_word():
     word = random.choice(words)[:-1]
     return word
 
-def get_valid_input(valid_words, attempts, guess_count):
-    in_word = input(f'{attempts - guess_count} attempts left. Enter guess: ')
+def get_valid_input(valid_words):
+    in_word = input('Enter guess: ')
     if in_word.lower() in valid_words:
         return in_word.lower()
     else:

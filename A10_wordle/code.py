@@ -3,9 +3,10 @@
 import random
 from colorama import init, Back
 from utils import get_random_word, get_valid_input
+import copy
 
 init(autoreset=True)
-word = get_random_word()
+word = 'hello' #get_random_word()
 
 with open('A10_wordle/valid-wordle-words.txt', 'r') as f:
     valid_words = f.read().splitlines()
@@ -21,14 +22,18 @@ guesses = []
 answered = False
 attempts = 6
 while len(guesses) < attempts:
-    input_word = get_valid_input(valid_words, attempts, len(guesses))
+    print(f'{attempts - len(guesses)} attempts left. ')
+    input_word = get_valid_input(valid_words)
     
+    word_map_copy = copy.deepcopy(word_map)
     printls = []
     for idx, char in enumerate(input_word):
-        if char in word_map:
-            for pos in word_map.get(char):
+        if char in word_map_copy and word_map_copy[char]: # due to example: tubas tasty
+            # print(word_map_copy)
+            for pos in word_map_copy.get(char):
                 if pos == idx:
                     printls.append(Back.GREEN + ' ' + char + ' ')
+                    word_map_copy[char].remove(pos) # due to example: tubas tasty
                     break    
             else:
                 printls.append(Back.YELLOW + ' ' + char + ' ')
