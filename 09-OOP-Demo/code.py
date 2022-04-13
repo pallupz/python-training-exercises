@@ -1,4 +1,7 @@
-
+# Exercise Name:
+# 	09-OOP-Demo
+# Description:
+# 	Create a class and demonstrate how @property decorator is used
 
 class Vehicle:
     def __init__(self, color, num_tyres, mileage, fuel_volume):

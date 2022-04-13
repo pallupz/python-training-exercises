@@ -1,6 +1,10 @@
-# https://gist.github.com/dracos/dd0668f281e685bad51479e5acaadb93
+# Exercise Name:
+# 	A10_wordle
+# Description:
+# 	Create the wordle game
+# Resources:
+# 	Valid Words List: https://gist.github.com/dracos/dd0668f281e685bad51479e5acaadb93
 
-import random
 from colorama import init, Back
 from utils import get_random_word, get_valid_input
 import copy
