@@ -11,4 +11,5 @@ sentence = 'Python is Awesome'
 
 reversed = ' '.join([word[::-1] for word in sentence.split(' ')])
 
+print(sentence)
 print(reversed)

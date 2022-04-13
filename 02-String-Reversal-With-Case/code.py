@@ -18,5 +18,6 @@ for idx, char in enumerate(sentence):
     else:
         output += reversed[idx]
 
+print(sentence)
 print(output)
 

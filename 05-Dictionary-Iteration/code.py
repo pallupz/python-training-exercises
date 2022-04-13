@@ -14,4 +14,5 @@ output = {}
 for key, value in ascii_dict.items():
     output[value] = key
 
+print(ascii_dict)
 print(output)

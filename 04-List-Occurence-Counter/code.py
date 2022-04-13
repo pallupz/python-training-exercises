@@ -18,6 +18,8 @@ duplicates = []
 for item, count in collections.Counter(sample_list).items():
     if count > 1:
         duplicates.append(item)
+
+print(sample_list)
 print(duplicates)
 
 
