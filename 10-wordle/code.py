@@ -15,7 +15,7 @@ print('\n\n************* WELCOME TO WORDLE *************')
 init(autoreset=True)
 word = get_random_word()
 
-with open('A10_wordle/valid-wordle-words.txt', 'r') as f:
+with open('10-wordle/valid-wordle-words.txt', 'r') as f:
     valid_words = f.read().splitlines()
 
 word_map = {}
