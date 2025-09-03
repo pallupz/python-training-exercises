@@ -1,8 +1,8 @@
-Exercise Name:
+# Exercise Name:
 	02-String-Reversal-With-Case
-Description:
+# Description:
 	Reverse each word of a string without changing upper-case positions.
 Given: 
 	sentence = "Python is Awesome"
-Return: 
+# Return: 
 	"Nohtyp si Emosewa"
